@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_database_name
+    username: your_username
+    password: your_password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: none  # Utilisez 'none' pour éviter que Spring Data JPA n'essaie de gérer la base de données
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml  # Chemin vers le fichier changelog master
+    contexts: development, production  # Vous pouvez définir différents contextes si nécessaire
+    default-schema: public  # Le schéma par défaut de la base de données
