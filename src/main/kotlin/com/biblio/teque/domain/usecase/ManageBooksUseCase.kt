@@ -15,9 +15,6 @@ class ManageBooksUseCase(private val repository: BooksRepository) {
         return book
     }
 
-    /**
-     * Returns all books sorted alphabetically by title (case‑insensitive).
-     */
     fun listBooks(): List<Book> =
         repository.findAll().sortedBy { it.title.lowercase() }
 }
