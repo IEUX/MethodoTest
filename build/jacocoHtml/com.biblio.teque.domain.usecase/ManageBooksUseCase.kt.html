@@ -15,10 +15,7 @@ import com.biblio.teque.domain.port.BooksRepository
 <span class="fc" id="L15">        return book</span>
     }
 
-    /**
-     * Returns all books sorted alphabetically by title (case‑insensitive).
-     */
     fun listBooks(): List&lt;Book&gt; =
-<span class="fc" id="L22">        repository.findAll().sortedBy { it.title.lowercase() }</span>
+<span class="fc" id="L19">        repository.findAll().sortedBy { it.title.lowercase() }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
