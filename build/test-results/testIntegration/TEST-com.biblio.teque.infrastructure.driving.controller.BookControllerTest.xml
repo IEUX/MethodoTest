@@ -1,77 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" tests="4" skipped="0" failures="4" errors="0" timestamp="2025-07-02T12:27:40.264Z" hostname="fedora" time="0.272">
+<testsuite name="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-03T08:13:30.393Z" hostname="fedora" time="0.725">
   <properties/>
-  <testcase name="POST books should return 400 when input is invalid()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.244">
-    <failure message="io.mockk.MockKException: Failed matching mocking signature for&#10;&#10;left matchers: [any()]" type="io.mockk.MockKException">io.mockk.MockKException: Failed matching mocking signature for
-
-left matchers: [any()]
-	at app//io.mockk.impl.recording.SignatureMatcherDetector.detect(SignatureMatcherDetector.kt:97)
-	at app//io.mockk.impl.recording.states.RecordingState.signMatchers(RecordingState.kt:39)
-	at app//io.mockk.impl.recording.states.RecordingState.round(RecordingState.kt:31)
-	at app//io.mockk.impl.recording.CommonCallRecorder.round(CommonCallRecorder.kt:50)
-	at app//io.mockk.impl.eval.RecordedBlockEvaluator.record(RecordedBlockEvaluator.kt:62)
-	at app//io.mockk.impl.eval.EveryBlockEvaluator.every(EveryBlockEvaluator.kt:30)
-	at app//io.mockk.MockKDsl.internalEvery(API.kt:94)
-	at app//io.mockk.MockKKt.every(MockK.kt:143)
-	at app//com.biblio.teque.infrastructure.driving.controller.BookControllerTest.POST books should return 400 when input is invalid(BookControllerTest.kt:67)
-	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="POST books should return 500 on unexpected error()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.006">
-    <failure message="io.mockk.MockKException: Failed matching mocking signature for&#10;&#10;left matchers: [any()]" type="io.mockk.MockKException">io.mockk.MockKException: Failed matching mocking signature for
-
-left matchers: [any()]
-	at app//io.mockk.impl.recording.SignatureMatcherDetector.detect(SignatureMatcherDetector.kt:97)
-	at app//io.mockk.impl.recording.states.RecordingState.signMatchers(RecordingState.kt:39)
-	at app//io.mockk.impl.recording.states.RecordingState.round(RecordingState.kt:31)
-	at app//io.mockk.impl.recording.CommonCallRecorder.round(CommonCallRecorder.kt:50)
-	at app//io.mockk.impl.eval.RecordedBlockEvaluator.record(RecordedBlockEvaluator.kt:62)
-	at app//io.mockk.impl.eval.EveryBlockEvaluator.every(EveryBlockEvaluator.kt:30)
-	at app//io.mockk.MockKDsl.internalEvery(API.kt:94)
-	at app//io.mockk.MockKKt.every(MockK.kt:143)
-	at app//com.biblio.teque.infrastructure.driving.controller.BookControllerTest.POST books should return 500 on unexpected error(BookControllerTest.kt:80)
-	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="GET books should return sorted book list()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.011">
-    <failure message="io.mockk.MockKException: Missing mocked calls inside every { ... } block: make sure the object inside the block is a mock" type="io.mockk.MockKException">io.mockk.MockKException: Missing mocked calls inside every { ... } block: make sure the object inside the block is a mock
-	at app//io.mockk.impl.recording.states.StubbingState.checkMissingCalls(StubbingState.kt:14)
-	at app//io.mockk.impl.recording.states.StubbingState.recordingDone(StubbingState.kt:8)
-	at app//io.mockk.impl.recording.CommonCallRecorder.done(CommonCallRecorder.kt:47)
-	at app//io.mockk.impl.eval.RecordedBlockEvaluator.record(RecordedBlockEvaluator.kt:63)
-	at app//io.mockk.impl.eval.EveryBlockEvaluator.every(EveryBlockEvaluator.kt:30)
-	at app//io.mockk.MockKDsl.internalEvery(API.kt:94)
-	at app//io.mockk.MockKKt.every(MockK.kt:143)
-	at app//com.biblio.teque.infrastructure.driving.controller.BookControllerTest.GET books should return sorted book list(BookControllerTest.kt:35)
-	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="POST books should create book when input is valid()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.005">
-    <failure message="io.mockk.MockKException: Failed matching mocking signature for&#10;&#10;left matchers: [any()]" type="io.mockk.MockKException">io.mockk.MockKException: Failed matching mocking signature for
-
-left matchers: [any()]
-	at app//io.mockk.impl.recording.SignatureMatcherDetector.detect(SignatureMatcherDetector.kt:97)
-	at app//io.mockk.impl.recording.states.RecordingState.signMatchers(RecordingState.kt:39)
-	at app//io.mockk.impl.recording.states.RecordingState.round(RecordingState.kt:31)
-	at app//io.mockk.impl.recording.CommonCallRecorder.round(CommonCallRecorder.kt:50)
-	at app//io.mockk.impl.eval.RecordedBlockEvaluator.record(RecordedBlockEvaluator.kt:62)
-	at app//io.mockk.impl.eval.EveryBlockEvaluator.every(EveryBlockEvaluator.kt:30)
-	at app//io.mockk.MockKDsl.internalEvery(API.kt:94)
-	at app//io.mockk.MockKKt.every(MockK.kt:143)
-	at app//com.biblio.teque.infrastructure.driving.controller.BookControllerTest.POST books should create book when input is valid(BookControllerTest.kt:50)
-	at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <system-out><![CDATA[14:27:36.750 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driving.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:27:37.357 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driving.controller.BookControllerTest
+  <testcase name="GET books returns expected payload()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.725"/>
+  <system-out><![CDATA[2025-07-03T10:13:29.822+02:00  INFO 80798 --- [biblioteque] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driving.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-03T10:13:29.852+02:00  INFO 80798 --- [biblioteque] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driving.controller.BookControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -82,17 +14,12 @@ left matchers: [any()]
 
  :: Spring Boot ::                (v3.5.3)
 
-2025-07-02T14:27:38.037+02:00  INFO 249679 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Starting BookControllerTest using Java 21.0.7 with PID 249679 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
-2025-07-02T14:27:38.039+02:00  INFO 249679 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : No active profile set, falling back to 1 default profile: "default"
-2025-07-02T14:27:40.192+02:00  INFO 249679 --- [biblioteque] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-07-02T14:27:40.192+02:00  INFO 249679 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-07-02T14:27:40.195+02:00  INFO 249679 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-07-02T14:27:40.249+02:00  INFO 249679 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Started BookControllerTest in 2.675 seconds (process running for 8.008)
+2025-07-03T10:13:29.881+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Starting BookControllerTest using Java 21.0.7 with PID 80798 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
+2025-07-03T10:13:29.881+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-07-03T10:13:30.350+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-07-03T10:13:30.351+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-07-03T10:13:30.354+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-07-03T10:13:30.374+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Started BookControllerTest in 0.515 seconds (process running for 20.433)
 ]]></system-out>
-  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (/home/ieux/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.6/17b32fd9f57deef02842f7f05abc4ad8127fe34e/byte-buddy-agent-1.17.6.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

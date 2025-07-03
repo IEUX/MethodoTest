@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookDAO.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">teque</a> &gt; <a href="index.source.html" class="el_package">com.biblio.teque.infrastructure.driven.postgres</a> &gt; <span class="el_source">BookDAO.kt</span></div><h1>BookDAO.kt</h1><pre class="source lang-java linenums">package com.biblio.teque.infrastructure.driven.postgres
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource
+import org.springframework.jdbc.core.RowMapper
+import org.springframework.stereotype.Repository
+import com.biblio.teque.domain.model.Book
+import com.biblio.teque.domain.port.BooksRepository
+
+<span class="nc" id="L10">@Repository</span>
+<span class="nc" id="L11">class BookDAO(</span>
+<span class="nc" id="L12">    private val jdbcTemplate: NamedParameterJdbcTemplate</span>
+) : BooksRepository {
+
+    override fun save(book: Book) {
+<span class="nc" id="L16">        val sql = &quot;INSERT INTO books(title, author) VALUES(:title, :author)&quot;</span>
+<span class="nc" id="L17">        val params = MapSqlParameterSource()</span>
+<span class="nc" id="L18">            .addValue(&quot;title&quot;, book.title)</span>
+<span class="nc" id="L19">            .addValue(&quot;author&quot;, book.author)</span>
+<span class="nc" id="L20">        jdbcTemplate.update(sql, params)</span>
+<span class="nc" id="L21">    }</span>
+
+    override fun findAll(): List&lt;Book&gt; {
+<span class="nc" id="L24">        val sql = &quot;SELECT title, author FROM books ORDER BY title&quot;</span>
+<span class="nc" id="L25">        return jdbcTemplate.query(sql, map)</span>
+    }
+
+<span class="nc" id="L28">    private val map = RowMapper { rs, _ -&gt;</span>
+<span class="nc" id="L29">        Book(</span>
+<span class="nc" id="L30">            title = rs.getString(&quot;title&quot;),</span>
+<span class="nc" id="L31">            author = rs.getString(&quot;author&quot;)</span>
+        )
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

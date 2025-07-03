@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
 	kotlin("jvm") version "1.9.25"
 	kotlin("plugin.spring") version "1.9.25"
@@ -47,9 +50,19 @@ dependencies {
 	testImplementation("io.kotest:kotest-assertions-core:5.9.1")
 	testImplementation("io.kotest:kotest-property:5.9.1")
 	testImplementation("io.mockk:mockk:1.13.8")
+	testImplementation("org.testcontainers:junit-jupiter:1.19.1")
+	testImplementation("org.testcontainers:postgresql:1.19.1")
+	testImplementation("org.testcontainers:jdbc-test:1.12.0")
+	testImplementation("org.testcontainers:testcontainers:1.19.1")
+	testImplementation("io.kotest.extensions:kotest-extensions-testcontainers:2.0.2")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	// TestIntegration
 	testIntegrationImplementation("io.mockk:mockk:1.13.8")
+	testIntegrationImplementation("org.testcontainers:junit-jupiter:1.19.1")
+	testIntegrationImplementation("org.testcontainers:postgresql:1.19.1")
+	testIntegrationImplementation("org.testcontainers:jdbc-test:1.12.0")
+	testIntegrationImplementation("org.testcontainers:testcontainers:1.19.1")
+	testIntegrationImplementation("io.kotest.extensions:kotest-extensions-testcontainers:2.0.2")
 	testIntegrationImplementation("io.kotest:kotest-assertions-core:5.9.1")
 	testIntegrationImplementation("io.kotest:kotest-runner-junit5:5.9.1")
 	testIntegrationImplementation("com.ninja-squad:springmockk:4.0.2")
@@ -71,6 +84,7 @@ dependencies {
 
     // Dépendance pour PostgreSQL
     implementation("org.postgresql:postgresql:42.5.0")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 
 
 }
@@ -101,4 +115,9 @@ tasks.jacocoTestReport {
         csv.required = false
         html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
     }
+}
+
+tasks.register("allTest") {
+    description = "Runs unit tests and integration tests together"
+    group = "verification"          // shows up under `gradle tasks
 }

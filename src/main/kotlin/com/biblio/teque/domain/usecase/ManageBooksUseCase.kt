@@ -5,10 +5,6 @@ import com.biblio.teque.domain.port.BooksRepository
 
 class ManageBooksUseCase(private val repository: BooksRepository) {
 
-    /**
-     * Adds a new [Book] to the repository after validating that the title and author are not blank.
-     * @throws IllegalArgumentException if the title or author is blank.
-     */
     fun addBook(book: Book): Unit {
         repository.save(book)
     }

@@ -5,15 +5,11 @@ import com.biblio.teque.domain.port.BooksRepository
 
 <span class="fc" id="L6">class ManageBooksUseCase(private val repository: BooksRepository) {</span>
 
-    /**
-     * Adds a new [Book] to the repository after validating that the title and author are not blank.
-     * @throws IllegalArgumentException if the title or author is blank.
-     */
     fun addBook(book: Book): Unit {
-<span class="nc" id="L13">        repository.save(book)</span>
-<span class="nc" id="L14">    }</span>
+<span class="nc" id="L9">        repository.save(book)</span>
+<span class="nc" id="L10">    }</span>
 
     fun listBooks(): List&lt;Book&gt; =
-<span class="fc" id="L17">        repository.findAll().sortedBy { it.title.lowercase() }</span>
+<span class="fc" id="L13">        repository.findAll().sortedBy { it.title.lowercase() }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
