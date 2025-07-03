@@ -51,4 +51,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: ${{ github.workspace }}/build/reports/tests/test/index.html
+          path: */coverage-results.md 
+          # path: ${{ github.workspace }}/build/reports/tests/test/index.html
