@@ -51,4 +51,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: ${{ github.workspace }}/**/build/reports/jacoco/**/debugCoverage.xml
+          path: ${{ github.workspace }}/**/build/reports/test/
