@@ -100,18 +100,15 @@ tasks.test {
     finalizedBy(tasks.jacocoTestReport) // report is always generated after tests run
 }
 
-tasks.jacocoTestReport {
-    dependsOn(tasks.test) // tests are required to run before generating the report
-}
-
 jacoco {
     toolVersion = "0.8.13"
     reportsDirectory = layout.buildDirectory.dir("reports/jacoco")
 }
 
 tasks.jacocoTestReport {
+	dependsOn(tasks.test)
     reports {
-        xml.required = false
+        xml.required = true
         csv.required = false
         html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
     }

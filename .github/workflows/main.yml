@@ -48,7 +48,7 @@ jobs:
         id: jacoco_reporter
         uses: PavanMudigonda/jacoco-reporter@v5.0
         with:
-          coverage_results_path: jacoco-report/test.xml
+          coverage_results_path: reports/jacoco/test/jacocoTestReport.xml
           coverage_report_name: Coverage
           coverage_report_title: JaCoCo
           skip_check_run: false
