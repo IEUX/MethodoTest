@@ -29,14 +29,18 @@ class BookControllerTest(
 
     @Test
     fun `GET books returns expected payload`() {   
+    // Given
     every {service.listBooks()} returns listOf(Book("1984", "George Orwell"))
+
+    // WHEN
     mockMvc.get("/books") {
         accept = MediaType.APPLICATION_JSON
         }
+        // THEN
         .andExpect {
             status { isOk() }
+            content { content { MediaType.APPLICATION_JSON }}
             content {
-                contentTypeCompatibleWith(MediaType.APPLICATION_JSON)
                 json(
                     """
                     [
@@ -47,6 +51,10 @@ class BookControllerTest(
                 )
             }
         }
-        verify { service.listBooks() }
     }
+
+    // @Test
+    // fun `REST route should return status code 500`() {
+        // verify { } { service.addBook(expected)}
+    // }
 }

@@ -3,11 +3,11 @@ package com.biblio.teque.infrastructure.driven.postgres
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource
 import org.springframework.jdbc.core.RowMapper
-import org.springframework.stereotype.Repository
+import org.springframework.stereotype.Service
 import com.biblio.teque.domain.model.Book
 import com.biblio.teque.domain.port.BooksRepository
 
-@Repository
+@Service
 class BookDAO(
     private val jdbcTemplate: NamedParameterJdbcTemplate
 ) : BooksRepository {

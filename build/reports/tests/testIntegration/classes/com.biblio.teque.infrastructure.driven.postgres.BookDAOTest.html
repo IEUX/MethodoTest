@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.666s</div>
+<div class="counter">0.673s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">should save and retrieve books()</td>
-<td class="success">0.666s</td>
+<td class="success">0.673s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,29 +90,29 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>10:13:17.676 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
-10:13:17.683 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-10:13:17.919 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-10:13:18.268 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-10:13:18.269 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
-10:13:18.290 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+<pre>14:30:12.461 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+14:30:12.468 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+14:30:12.762 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+14:30:13.196 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+14:30:13.198 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+14:30:13.219 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
   Server Version: 28.3.0
   API Version: 1.51
   Operating System: Fedora Linux 41 (Workstation Edition)
   Total Memory: 15197 MB
-10:13:18.327 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Creating container for image: testcontainers/ryuk:0.5.1
-10:13:18.333 [Test worker] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.5.1, configFile: /home/ieux/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/ieux/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
-10:13:18.732 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 is starting: f39e4348f5d25941287aee7ee0f91eb56538ac7786cc3fcc0bdec43da9007db1
-10:13:19.122 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 started in PT0.794436689S
-10:13:19.127 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-10:13:19.127 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
-10:13:19.128 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
-10:13:19.129 [Test worker] INFO tc.postgres:17 -- Creating container for image: postgres:17
-10:13:19.272 [Test worker] INFO tc.postgres:17 -- Container postgres:17 is starting: 69fd16f7eef83348e98f508a8218e5707e4bdecffba0d4fa70b7842a5eb89151
-10:13:22.427 [Test worker] INFO tc.postgres:17 -- Container postgres:17 started in PT3.298671112S
-10:13:22.429 [Test worker] INFO tc.postgres:17 -- Container is started (JDBC URL: jdbc:postgresql://localhost:32799/booksdb?loggerLevel=OFF)
-10:13:22.646 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driven.postgres.BookDAOTest]: BookDAOTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:13:23.556 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driven.postgres.BookDAOTest
+14:30:13.275 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Creating container for image: testcontainers/ryuk:0.5.1
+14:30:13.283 [Test worker] INFO org.testcontainers.utility.RegistryAuthLocator -- Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.5.1, configFile: /home/ieux/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/ieux/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+14:30:13.634 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 is starting: b8415ea7fd16d640290d0a969deca1587d79a6dac213565656b42a824e77e95f
+14:30:14.013 [Test worker] INFO tc.testcontainers/ryuk:0.5.1 -- Container testcontainers/ryuk:0.5.1 started in PT0.73803554S
+14:30:14.018 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+14:30:14.018 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+14:30:14.019 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+14:30:14.020 [Test worker] INFO tc.postgres:17 -- Creating container for image: postgres:17
+14:30:14.178 [Test worker] INFO tc.postgres:17 -- Container postgres:17 is starting: 32b0cd655fdccd380340ad0ec21443a260bc242ee9a3e8cd495d512ba11e03c6
+14:30:19.259 [Test worker] INFO tc.postgres:17 -- Container postgres:17 started in PT5.23901002S
+14:30:19.260 [Test worker] INFO tc.postgres:17 -- Container is started (JDBC URL: jdbc:postgresql://localhost:32801/booksdb?loggerLevel=OFF)
+14:30:19.371 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driven.postgres.BookDAOTest]: BookDAOTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:30:19.832 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driven.postgres.BookDAOTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -123,21 +123,21 @@
 
  :: Spring Boot ::                (v3.5.3)
 
-2025-07-03T10:13:24.717+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : Starting BookDAOTest using Java 21.0.7 with PID 80798 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
-2025-07-03T10:13:24.720+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-07-03T10:13:26.798+02:00  INFO 80798 --- [biblioteque] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-03T10:13:27.217+02:00  INFO 80798 --- [biblioteque] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6edd2ef4
-2025-07-03T10:13:27.221+02:00  INFO 80798 --- [biblioteque] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-03T10:13:27.542+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.database                       : Set default schema name to public
-2025-07-03T10:13:27.713+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
-2025-07-03T10:13:28.109+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
-2025-07-03T10:13:28.115+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
-2025-07-03T10:13:28.180+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.servicelocator                 : Cannot load service: liquibase.hub.HubService: Provider liquibase.hub.core.StandardHubService could not be instantiated
+2025-07-03T14:30:20.415+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : Starting BookDAOTest using Java 21.0.7 with PID 325282 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
+2025-07-03T14:30:20.416+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-07-03T14:30:21.460+02:00  INFO 325282 --- [biblioteque] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-03T14:30:21.670+02:00  INFO 325282 --- [biblioteque] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e2544e9
+2025-07-03T14:30:21.672+02:00  INFO 325282 --- [biblioteque] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-03T14:30:21.823+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.database                       : Set default schema name to public
+2025-07-03T14:30:21.920+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2025-07-03T14:30:22.207+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2025-07-03T14:30:22.212+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.changelog                      : Reading from public.databasechangelog
+2025-07-03T14:30:22.257+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.servicelocator                 : Cannot load service: liquibase.hub.HubService: Provider liquibase.hub.core.StandardHubService could not be instantiated
 Running Changeset: db/changelogs/db.changelog-books.xml::1::you
-2025-07-03T10:13:28.191+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.changelog                      : Table books created
-2025-07-03T10:13:28.192+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.changelog                      : ChangeSet db/changelogs/db.changelog-books.xml::1::you ran successfully in 7ms
-2025-07-03T10:13:28.200+02:00  INFO 80798 --- [biblioteque] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
-2025-07-03T10:13:28.722+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : Started BookDAOTest in 4.799 seconds (process running for 18.781)
+2025-07-03T14:30:22.265+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.changelog                      : Table books created
+2025-07-03T14:30:22.266+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.changelog                      : ChangeSet db/changelogs/db.changelog-books.xml::1::you ran successfully in 4ms
+2025-07-03T14:30:22.271+02:00  INFO 325282 --- [biblioteque] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2025-07-03T14:30:22.742+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.driven.postgres.BookDAOTest      : Started BookDAOTest in 2.713 seconds (process running for 15.681)
 </pre>
 </span>
 </div>
@@ -160,7 +160,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14.2</a> at Jul 3, 2025, 10:13:31 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14.2</a> at Jul 3, 2025, 2:30:26 PM</p>
 </div>
 </div>
 </body>

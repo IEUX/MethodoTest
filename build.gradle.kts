@@ -120,4 +120,5 @@ tasks.jacocoTestReport {
 tasks.register("allTest") {
     description = "Runs unit tests and integration tests together"
     group = "verification"          // shows up under `gradle tasks
+    dependsOn("test", "testIntegration")
 }

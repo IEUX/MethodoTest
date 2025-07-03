@@ -3,11 +3,11 @@
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource
 import org.springframework.jdbc.core.RowMapper
-import org.springframework.stereotype.Repository
+import org.springframework.stereotype.Service
 import com.biblio.teque.domain.model.Book
 import com.biblio.teque.domain.port.BooksRepository
 
-<span class="nc" id="L10">@Repository</span>
+<span class="nc" id="L10">@Service</span>
 <span class="nc" id="L11">class BookDAO(</span>
 <span class="nc" id="L12">    private val jdbcTemplate: NamedParameterJdbcTemplate</span>
 ) : BooksRepository {

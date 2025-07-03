@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-03T08:13:30.393Z" hostname="fedora" time="0.725">
+<testsuite name="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-03T12:30:24.616Z" hostname="fedora" time="1.088">
   <properties/>
-  <testcase name="GET books returns expected payload()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="0.725"/>
-  <system-out><![CDATA[2025-07-03T10:13:29.822+02:00  INFO 80798 --- [biblioteque] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driving.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-03T10:13:29.852+02:00  INFO 80798 --- [biblioteque] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driving.controller.BookControllerTest
+  <testcase name="GET books returns expected payload()" classname="com.biblio.teque.infrastructure.driving.controller.BookControllerTest" time="1.088"/>
+  <system-out><![CDATA[2025-07-03T14:30:23.954+02:00  INFO 325282 --- [biblioteque] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblio.teque.infrastructure.driving.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-03T14:30:23.982+02:00  INFO 325282 --- [biblioteque] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblio.teque.BiblioTequeApplication for test class com.biblio.teque.infrastructure.driving.controller.BookControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,12 +14,12 @@
 
  :: Spring Boot ::                (v3.5.3)
 
-2025-07-03T10:13:29.881+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Starting BookControllerTest using Java 21.0.7 with PID 80798 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
-2025-07-03T10:13:29.881+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : No active profile set, falling back to 1 default profile: "default"
-2025-07-03T10:13:30.350+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-07-03T10:13:30.351+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-07-03T10:13:30.354+02:00  INFO 80798 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2025-07-03T10:13:30.374+02:00  INFO 80798 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Started BookControllerTest in 0.515 seconds (process running for 20.433)
+2025-07-03T14:30:24.021+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Starting BookControllerTest using Java 21.0.7 with PID 325282 (started by ieux in /home/ieux/Documents/Ynov/MethodoTest/MethodoTest)
+2025-07-03T14:30:24.021+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-07-03T14:30:24.555+02:00  INFO 325282 --- [biblioteque] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-07-03T14:30:24.556+02:00  INFO 325282 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-07-03T14:30:24.559+02:00  INFO 325282 --- [biblioteque] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-07-03T14:30:24.593+02:00  INFO 325282 --- [biblioteque] [    Test worker] c.b.t.i.d.controller.BookControllerTest  : Started BookControllerTest in 0.603 seconds (process running for 17.532)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

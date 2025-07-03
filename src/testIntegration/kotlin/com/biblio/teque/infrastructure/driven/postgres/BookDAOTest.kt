@@ -18,6 +18,13 @@ import org.springframework.jdbc.core.RowMapper
 @Testcontainers
 @SpringBootTest
 class BookDAOTest {
+    // init {
+    //     beforeTest {
+    //         performQuery (
+    //             "DELETE * FROM books"
+    //         )
+    //     }
+    // }
 
     companion object {
         @Container
