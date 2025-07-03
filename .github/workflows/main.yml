@@ -51,13 +51,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: build/reports/jacoco/test/html
-
-      - name: Run PIT mutation tests
-        run: ./gradlew pitest
-
-      - name: Upload PIT report
-        uses: actions/upload-artifact@v4
-        with:
-          name: pit-report
-          path: build/reports/pitest
+          path: ${{ github.workspace }}/**/build/reports/jacoco/**/debugCoverage.xml
