@@ -41,8 +41,24 @@ extendsFrom(configurations.implementation.get())
 }
 
 dependencies {
+	    // accès JDBC (NamedParameterJdbcTemplate, RowMapper…)
+    // driver PostgreSQL
+    implementation("org.postgresql:postgresql:42.7.3")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc"){
+		exclude(module = "org.mockito")
+	}
+    // Liquibase
+    implementation("org.liquibase:liquibase-core:4.27.0")
+
+    // Testcontainers PostgreSQL
+	testImplementation("org.springframework.boot:spring-boot-starter-jdbc")
+    testImplementation("org.testcontainers:postgresql:1.19.7")
+    testImplementation("org.testcontainers:junit-jupiter:1.19.7")
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework:spring-test")
+
 	// TestImplementation
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
@@ -114,7 +130,7 @@ tasks.jacocoTestReport {
     }
 }
 
-tasks.register("allTest") {
+tasks.register("allTests") {
     description = "Runs unit tests and integration tests together"
     group = "verification"          // shows up under `gradle tasks
     dependsOn("test", "testIntegration")

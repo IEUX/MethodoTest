@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <changeSet id="1" author="you">
+    <changeSet id="2" author="you">
         <createTable tableName="books">
             <column name="id" type="SERIAL" autoIncrement="true">
                 <constraints primaryKey="true"/>
@@ -14,6 +14,9 @@
                 <constraints nullable="false"/>
             </column>
             <column name="author" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_rented" type="boolean" defaultValueBoolean="false">
                 <constraints nullable="false"/>
             </column>
         </createTable>

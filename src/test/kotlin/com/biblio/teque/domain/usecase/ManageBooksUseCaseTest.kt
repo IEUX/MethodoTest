@@ -15,16 +15,6 @@ class ManageBooksUseCaseTest : DescribeSpec({
 
     describe("addBook") {
 
-        // it("should save a valid book") {
-        //     val title = "Clean Code"
-        //     val author = "Robert C. Martin"
-
-        //     val book = useCase.addBook(title, author)
-
-        //     book shouldBe Book(title, author)
-        //     verify { repository.save(book) }
-        // }
-
         it("should throw when title is blank") {
             shouldThrow<IllegalArgumentException> {
                 Book("   ", "Author")
@@ -35,6 +25,11 @@ class ManageBooksUseCaseTest : DescribeSpec({
             shouldThrow<IllegalArgumentException> {
                 Book("Title", "")
             }
+        }
+
+        it("should create a not rented book") {
+            val book = Book("Title", "Author")
+            book.isRented shouldBe false
         }
     }
 
@@ -57,4 +52,31 @@ class ManageBooksUseCaseTest : DescribeSpec({
             )
         }
     }
+
+     describe("rentBook") {
+
+        it("should mark book as rented when available") {
+            val book = Book("Dune", "Frank Herbert")
+            every { repository.findByTitle("Dune") } returns book
+
+            useCase.rentBook("Dune")
+
+            book.isRented shouldBe true
+            verify { repository.save(book) }
+        }
+
+        it("should throw when book already rented") {
+            val book = Book("Dune", "Frank Herbert", isRented = true)
+            every { repository.findByTitle("Dune") } returns book
+
+            shouldThrow<IllegalStateException> { useCase.rentBook("Dune") }
+        }
+
+        it("should throw when book not found") {
+            every { repository.findByTitle("Unknown") } returns null
+
+            shouldThrow<IllegalArgumentException> { useCase.rentBook("Unknown") }
+        }
+    }
+    
 })

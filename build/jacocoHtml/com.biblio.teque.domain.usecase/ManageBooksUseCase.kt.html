@@ -10,6 +10,18 @@ import com.biblio.teque.domain.port.BooksRepository
 <span class="nc" id="L10">    }</span>
 
     fun listBooks(): List&lt;Book&gt; =
-<span class="fc" id="L13">        repository.findAll().sortedBy { it.title.lowercase() }</span>
+<span class="fc" id="L13">        repository.findAll().sortedBy { it.title.lowercase()</span>
+<span class="fc" id="L14">    }</span>
+
+    fun rentBook(title: String) {
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        val book = repository.findByTitle(title)</span>
+<span class="fc" id="L18">            ?: throw IllegalArgumentException(&quot;Book '$title' not found&quot;)</span>
+
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (book.isRented)</span>
+<span class="fc" id="L21">            throw IllegalStateException(&quot;Book '$title' is already rented&quot;)</span>
+
+<span class="fc" id="L23">        book.isRented = true</span>
+<span class="fc" id="L24">        repository.save(book)          // persiste l’état loué</span>
+<span class="fc" id="L25">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

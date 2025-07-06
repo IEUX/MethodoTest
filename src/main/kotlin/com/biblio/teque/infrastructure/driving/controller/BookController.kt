@@ -30,5 +30,19 @@ class BookController(
         }
     }
 
+    @PostMapping("/{title}/rent")
+    fun rentBook(@PathVariable title: String): ResponseEntity<Any> = try {
+        manageBooksUseCase.rentBook(title)
+        ResponseEntity.ok().build()
+    } catch (e: IllegalArgumentException) {
+        ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.message)
+    } catch (e: IllegalStateException) {
+        ResponseEntity.status(HttpStatus.CONFLICT).body(e.message)
+    }
+    
+    @ExceptionHandler(Exception::class)
+    fun handleGenericException(ex: Exception): ResponseEntity<String> {
+        return ResponseEntity("Internal server error: ${ex.message}", HttpStatus.INTERNAL_SERVER_ERROR)
+    }
     //@ResponseStatus()
 }

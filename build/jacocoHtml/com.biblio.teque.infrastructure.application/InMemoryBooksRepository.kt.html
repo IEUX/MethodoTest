@@ -16,5 +16,8 @@ import org.springframework.stereotype.Service
     override fun findAll(): List&lt;Book&gt; {
 <span class="nc" id="L17">        return books.sortedBy { it.title }</span>
     }
+    override fun findByTitle(title: String): Book? =
+<span class="nc" id="L20">        books.firstOrNull { it.title.equals(title, ignoreCase = true) </span>
+<span class="nc" id="L21">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

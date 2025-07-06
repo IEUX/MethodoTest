@@ -30,6 +30,20 @@ import org.springframework.web.bind.annotation.*
         }
     }
 
+    @PostMapping(&quot;/{title}/rent&quot;)
+<span class="nc" id="L34">    fun rentBook(@PathVariable title: String): ResponseEntity&lt;Any&gt; = try {</span>
+<span class="nc" id="L35">        manageBooksUseCase.rentBook(title)</span>
+<span class="nc" id="L36">        ResponseEntity.ok().build()</span>
+<span class="nc" id="L37">    } catch (e: IllegalArgumentException) {</span>
+<span class="nc" id="L38">        ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.message)</span>
+<span class="nc" id="L39">    } catch (e: IllegalStateException) {</span>
+<span class="nc" id="L40">        ResponseEntity.status(HttpStatus.CONFLICT).body(e.message)</span>
+<span class="nc" id="L41">    }</span>
+    
+    @ExceptionHandler(Exception::class)
+    fun handleGenericException(ex: Exception): ResponseEntity&lt;String&gt; {
+<span class="nc" id="L45">        return ResponseEntity(&quot;Internal server error: ${ex.message}&quot;, HttpStatus.INTERNAL_SERVER_ERROR)</span>
+    }
     //@ResponseStatus()
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

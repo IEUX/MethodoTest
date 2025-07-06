@@ -16,4 +16,7 @@ class InMemoryBooksRepository : BooksRepository {
     override fun findAll(): List<Book> {
         return books.sortedBy { it.title }
     }
+    override fun findByTitle(title: String): Book? =
+        books.firstOrNull { it.title.equals(title, ignoreCase = true) 
+    }
 }

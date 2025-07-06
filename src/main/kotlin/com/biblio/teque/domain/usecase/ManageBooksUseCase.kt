@@ -10,5 +10,17 @@ class ManageBooksUseCase(private val repository: BooksRepository) {
     }
 
     fun listBooks(): List<Book> =
-        repository.findAll().sortedBy { it.title.lowercase() }
+        repository.findAll().sortedBy { it.title.lowercase()
+    }
+
+    fun rentBook(title: String) {
+        val book = repository.findByTitle(title)
+            ?: throw IllegalArgumentException("Book '$title' not found")
+
+        if (book.isRented)
+            throw IllegalStateException("Book '$title' is already rented")
+
+        book.isRented = true
+        repository.save(book)          // persiste l’état loué
+    }
 }
